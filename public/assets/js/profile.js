@@ -6,11 +6,6 @@ function closeWeightChange() {
     document.querySelector(".modal").classList.remove("is-active")
 }
 
-function saveWeight() {
-    // weight = document.querySelector(".weightInput").value
-    // console.log(weight);
-}
-
 
 $(document).ready(function () {
     $.put = function(url, data, callback, type){

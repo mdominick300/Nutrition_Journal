@@ -26,21 +26,6 @@ $(document).on("change", "input.unitQuantityBox", function(event){
    
 })
 
-// function test() {
-
-//     $.ajax({
-//         "async": true,
-//         "crossDomain": true,
-//         "url": "https://api.nutritionix.com/v1_1/search/subway?results=0%3A20&cal_min=0&cal_max=1000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_calories&appId=b04916a8&appKey=a0297706ab50712f995e4ad30909ae42",
-//         "method": "GET",
-//         "processData": true,
-
-//     }).then(function (response) {
-//         console.log(response);
-//     })
-// }
-
-// test();
 function picture() {
     var settings = {
         "async": true,
@@ -99,7 +84,7 @@ function foodAjax() {
         "use_branded_foods": false,
         "locale": "en_US"}`
 
-        // "data": "{\n \"query\": \"yogurt\",\n \"num_servings\": 1,\n \"aggregate\": \"string\",\n \"line_delimited\": false,\n \"use_raw_foods\": false,\n \"include_subrecipe\": false,\n \"timezone\": \"US/Eastern\",\n \"consumed_at\": null,\n \"lat\": null,\n \"lng\": null,\n \"meal_type\": 0,\n \"use_branded_foods\": false,\n \"locale\": \"en_US\"\n }"
+       
     }
 
     $.ajax(settings2).done(function (response) {
@@ -192,17 +177,7 @@ function workoutInfo() {
             "postman-token": "fa71a67a-c306-e015-1ccb-f9e7b4dd2424"
         },
         "processData": false,
-        // "data": `{
-        //         "query": "20 minute run",
-        //         "gender": "female",
-        //         "weight_kg": 72.5,
-        //         "height_cm": 167.64,
-        //         "age": 30
-        //     }`
-
         "data": data
-
-        // "data": "{\n \"query\": \"toe touches 10 min\",\n \"\gender\": \"female\",\n \"weight_kg\":72.5,\n \"height_cm\":167.64,\n \"age\":30}"
 
     }
 

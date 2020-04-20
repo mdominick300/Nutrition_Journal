@@ -69,23 +69,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [1, 3]
       }
     }
-    // ,
-    // avatar: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    //     validate: {
-    //         len: [1, 3]
-    //     }
-    // }
   }
-    // ,{
-    //     classMethods: {
-    //         associate: function(models){
-    //             User.hasMany(models.Food),
-    //             User.hasMany(models.Exercise)
-    //         }
-    //     }
-    // }
   );
 
 

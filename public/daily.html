@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Questrial&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="css" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
+        media="all">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Archivo+Black" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nutritionLabel.css">
+    ​
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css"
+        media="all">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/tabs.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="hero is-info ">
+        <div class="hero-body">
+            <div class="container welcomeUser">
+                <h1 class="title" id="welcome" style="color: white">
+                    Welcome
+                </h1>
+                <h2 class="subtitle user-name" data-name="">
+                </h2>
+            </div>
+        </div>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+            <a href="/welcome" id="1" class="navbar-item">
+                <span class="icon is-small"></span>
+                <span class="tabText"><i class="fas fa-user-circle" aria-hidden="true"></i>Profile</span>
+            </a>
+
+            <a href="/food" id="2" class="navbar-item">
+                <span class="icon is-small"></span>
+                <span class="tabText"><i class="fas fa-apple-alt" aria-hidden="true"></i>Food</span>
+            </a>
+
+            <a href="/exercise" id="3" class="navbar-item">
+                <span class="icon is-small"></span>
+                <span class="tabText"><i class="fas fa-walking" aria-hidden="true"></i>Excercise</span>
+            </a>
+
+            <a id="4" href="/daily" class="navbar-item">
+                <span class="icon is-small"></span>
+                <span class="tabText"><i class="fas fa-info-circle" aria-hidden="true"></i>Logs</span>
+            </a>
+
+
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="/logout" class="button is-primary" style="background-color: #192710;">
+                            Logout</a>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <nav class="navbar-menu" role="navigation" aria-label="dropdown navigation">
+
+        </nav>
+        <div class="tab-content">
+        <div id="pane-4" class="tab-pane is-active">
+
+            <div class="columns">
+                <div class="column" style="min-width: 380px;">
+                    <div class="card large">
+                        <div class="card-content">
+                            <div class="columns">
+                                <div class="column"><button class="button" id="changeDay" onclick="changeDay()"><i class="fas fa-arrow-left"></i></button></div>
+                                <div class="column">
+                                    <h1 style="text-align:center;font-size:35px;"><strong>Daily Log</strong></h1>
+                                    <p id="displayDate"></p>
+                                </div>
+                                <div class="column has-text-right"><button class="button" id="changeDay" onclick="changeDayForward()"><i class="fas fa-arrow-right"></i></button></div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="columns" id="flexfix">
+                                <div class="column">
+                                    <div style="font-size:25px;"><strong>Posts</strong></div>
+                                    <br>
+                                    <p><strong>Daily Needs</strong></p>
+                                    <br>
+                                    <p style="text-decoration:underline"><strong>Exercises</strong></p>
+                                    <p class="exercisePost"></p>
+                                    <br>
+                                    <p style="text-decoration:underline"><strong>Foods</strong></p>
+                                    <p class="foodPost"></p>
+                                </div>
+                                <div class=column>
+                                    <div style="font-size:25px;"><strong>Calories</strong></div>
+                                    <br>
+                                    <p id="startcalorie"></p>
+                                    <p class="exerciseCalorie"></p>
+                                    <p class="foodCalorie"></p>
+                                    <div></div>
+                                </div>
+                                <div>
+
+                                </div>
+
+                            </div>
+                            <div class="columns">
+                                <div class="column"><strong>Remaining Calories: </strong></div>
+                                <div class="column" id="caloriesremaining"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="nonfooter hero-foot">
+            <div class="content has-text-centered">
+                <p>
+                    <strong style="color: #4d6a1b; padding-top:5px"> © 2020 Thomas Argent, Matt Dominick, Johan Bueno,
+                        Sharon
+                        Yelverton
+                    </strong>
+
+                </p>
+            </div>
+        </footer>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script type="text/javascript" src='assets/js/nutritionLabel.js'></script>
+        <script type='text/javascript' src='assets/js/nutrition.js'></script>
+        <script type='text/javascript' src='assets/js/users.js'></script>
+        <script src="assets/js/tabs.js"></script>
+        <script src="assets/js/quotes.js"></script>
+        <script src="assets/js/profile.js"></script>
+        <script src="assets//js/posts.js"></script>
+</body>
+
+</html>

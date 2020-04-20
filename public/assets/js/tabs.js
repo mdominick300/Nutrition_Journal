@@ -15,43 +15,28 @@ function toggleTab(selectedNav, targetId) {
       }
     }
   });
-
-  var navLi = document.querySelectorAll(".tab-pane");
-
-  // navLi.forEach(function (tab) {
-  //   if (tab.id == targetId) {
-  //     tab.style.display = "block";
-  //   } else {
-  //     tab.style.display = "none";
-  //   }
-  // });
 }
 
 // FOOD SEARCH FUNCTION//////////////////////////////
 foodButton = $("#foodButton");
 foodButton.on("click", doFoodSearch);
-document.querySelector("#input").addEventListener("keyup", function(event){
-  if(event.keyCode === 13){
+document.querySelector("#input").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
     foodButton.click();
   }
 });
 
-  function doFoodSearch(event) {
+function doFoodSearch(event) {
 
-    event.preventDefault();
-    foodSearch = $('#input').val();
+  event.preventDefault();
+  foodSearch = $('#input').val();
 
-    if (foodSearch !== '') {
-      foodAjax()
-      picture();
-      document.querySelector(".foodSrchInfo").classList.remove('hidden');
-    } else alert("Enter a Food!")
-
-
-    // console.log(foodSearch);
-
-
-  };
+  if (foodSearch !== '') {
+    foodAjax()
+    picture();
+    document.querySelector(".foodSrchInfo").classList.remove('hidden');
+  } else alert("Enter a Food!")
+};
 
 
 workoutButton = document.querySelector("#workoutButton")
@@ -68,12 +53,6 @@ if (workoutButton) {
     if (workout !== '' && time !== '') {
       workoutInfo();
     } else alert("Enter all info!")
-
-
-    // console.log(today);
-    // console.log(workout);
-
-
   })
 };
 
@@ -83,14 +62,6 @@ if (exerciseLogButton) {
   exerciseLogButton.addEventListener("click", function (event) {
 
     event.preventDefault();
-
-    // console.log(time);
-    // console.log(workout);
-    // console.log(exeInput)
-    // console.log(inverseToday);
-    // console.log(calories)
-
-
     handleFormSubmit();
     exerciseSubmitted();
   })
@@ -123,8 +94,6 @@ function submitPost(post) {
 
   )
 };
-// Initialize all elements with carousel class.
-// const carousels = bulmaCarousel.attach('.carousel', options);
 
 
 foodLogButton = document.querySelector("#logButton")
@@ -134,7 +103,7 @@ if (foodLogButton) {
 
     event.preventDefault();
 
-   
+
     submitFood();
 
   })
@@ -163,10 +132,10 @@ function submitFood() {
 function submitPostFood(post) {
   // console.log(post);
   $.post("/api/foods", post
- 
+
   );
- 
- 
+
+
 };
 
 
