@@ -35,7 +35,7 @@
         </div>
         <nav class="navbar" role="navigation" aria-label="main navigation">
 
-            <a href="/welcome" id="1" class="navbar-item">
+            <a href="/welcome" id="1" class="navbar-item is-centered">
                 <span class="icon is-small"></span>
                 <span class="tabText"><i class="fas fa-user-circle" aria-hidden="true"></i>Profile</span>
             </a>
@@ -80,18 +80,18 @@
                 <div class="column" style="min-width: 380px;">
                     <div class="card large">
                         <div class="card-content">
-                            <div class="columns">
-                                <div class="column"><button class="button" id="changeDay" onclick="changeDay()"><i class="fas fa-arrow-left"></i></button></div>
-                                <div class="column">
-                                    <h1 style="text-align:center;font-size:35px;"><strong>Daily Log</strong></h1>
+                            <div class="columns" id="logtitle">
+                                <div class="has-text-left" style="float:left;width:33%"><button class="button" id="" onclick="changeDay()"><i class="fas fa-arrow-left"></i></button></div>
+                                <div class="" style="float:left;width:33%">
+                                    <h1 ><strong>Daily Log</strong></h1>
                                     <p id="displayDate"></p>
                                 </div>
-                                <div class="column has-text-right"><button class="button" id="changeDay" onclick="changeDayForward()"><i class="fas fa-arrow-right"></i></button></div>
+                                <div class="has-text-right hidden changeDay" id="changeDay" style="float:left;width:33%"><button class="button" onclick="changeDayForward()"><i class="fas fa-arrow-right"></i></button></div>
                             </div>
                             <br>
                             <br>
-                            <div class="columns" id="flexfix">
-                                <div class="column">
+                            <div class="columns " style="margin-top:40px;">
+                                <div class="column has-text-left">
                                     <div style="font-size:25px;"><strong>Posts</strong></div>
                                     <br>
                                     <p><strong>Daily Needs</strong></p>

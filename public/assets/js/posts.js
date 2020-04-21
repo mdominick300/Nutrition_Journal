@@ -67,6 +67,12 @@ $(document).ready(function () {
     }
     call()
     $("#caloriesremaining").text(total)
+    if(dayChange > 0){
+      $(".changeDay").removeClass("hidden")
+    }
+    if(dayChange <= 0){
+      $(".changeDay").addClass("hidden")
+    }
 
   });
 });
@@ -76,6 +82,8 @@ function call() {
   total = parseInt(value1) + exerciseCalorieCount - foodCalorieCount;
   if (total < 0) {
     $("#caloriesremaining").css("color", "red")
+  }else{
+    $("#caloriesremaining").css("color", "green")
   }
 }
 function reset(){
@@ -147,6 +155,12 @@ $.get('/api/foods').then(function (data) {
   
   call()
   $("#caloriesremaining").text(total)
+  if(dayChange > 0){
+    $(".changeDay").removeClass("hidden")
+  }
+  if(dayChange <= 0){
+    $(".changeDay").addClass("hidden")
+  }
 });
 }
 
@@ -213,6 +227,12 @@ function changeDayForward(){
     }
     call()
     $("#caloriesremaining").text(total)
+    if(dayChange > 0){
+      $(".changeDay").removeClass("hidden")
+    }
+    if(dayChange <= 0){
+      $(".changeDay").addClass("hidden")
+    }
   
   });
   }

@@ -35,9 +35,11 @@ body {
   margin-bottom: 10px;
   text-align: center;
   font-size: x-large;
+  margin-left:3%;
+  margin-right:3%;
 }
-.navbar-item span{
-  width: 250px;
+.navbar-item{
+  width: 20%;
   text-align: center;
 }
 
@@ -312,7 +314,9 @@ ul {
 }
 .navbar {
 text-align: center;
-
+}
+.navbar-end {
+  justify-content: end;
 }
 /* td{
         width: 25px;
@@ -357,6 +361,10 @@ text-align: center;
 #exercises, #foods{
     font-size: 10px;
 }
+#logtitle{
+  text-align:center;
+  font-size:35px;
+}
 /*MEDIA QUERIES*/
 @media (max-width: 720px) {
   #quoteButton,
@@ -368,5 +376,12 @@ text-align: center;
   }
   input::placeholder {
     font-size:20px;
+  }
+  #logtitle{
+    font-size:20px;
+  }
+  .navbar-item{
+    width:100%;
+    text-align:center;
   }
 }
