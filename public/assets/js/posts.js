@@ -29,7 +29,7 @@ $(document).ready(function () {
           var row = $("<div class='columns' id='removeExercise'>");
 
           
-          row.append("<p class='' style='text-indent: 10px;width:50%;margin-top:10px;'>" + data[i].exercise_name + " (" + data[i].duration + "min)</p>" + "<span class='' style='color:green;width:50%;margin-top:10px;'>" + data[i].calories_burned + "</p>");
+          row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].exercise_name +  "</p><p> (" + data[i].duration + "min)</p></div>" + "<p class='' style='color:green;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories_burned + "</p>");
           $(".exercisePost").prepend(row);
 
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
           console.log(foodCalorieCount);
           var row = $("<div class='columns' id='removeFood'>");
         
-          row.append("<p class='' style='text-indent:10px;width:50%;margin-top:10px;'>" + data[i].food_name + " (" + data[i].servings + " servings)</p>" + "<p class='' style='color:red;width:50%;margin-top:10px;'>" + data[i].calories + "</p>");
+          row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].food_name + "</p><p> (" + data[i].servings + " servings)</p></div>" + "<p class='' style='color:red;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories + "</p>");
 
           $(".foodPost").prepend(row);
 
@@ -117,8 +117,8 @@ $.get('/api/exercises').then(function (data) {
         exerciseCalorieCount = exerciseCalorieCount + data[i].calories_burned
         console.log(exerciseCalorieCount)
 
-        var row = $("<div class='columns' id='removeExercise'>");
-        row.append("<p class='' style='text-indent:10px;width:50%;margin-top:10px;'>" + data[i].exercise_name + " (" + data[i].duration + "min)</p>" + "<span class='' style='color:green;width:50%;margin-top:10px;'>" + data[i].calories_burned + "</p>");
+        var row = $("<div class='' id='removeExercise'>");
+        row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].exercise_name +  "</p><p> (" + data[i].duration + "min)</p></div>" + "<p class='' style='color:green;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories_burned + "</p>");
         $(".exercisePost").prepend(row);
       }
     }
@@ -145,8 +145,8 @@ $.get('/api/foods').then(function (data) {
         foodCalorieCount = foodCalorieCount + data[i].calories
         console.log(foodCalorieCount);
         
-        var row = $("<div class='columns' id='removeFood'>");
-        row.append("<p class='' style='text-indent:10px;width:50%;margin-top:10px;'>" + data[i].food_name + " (" + data[i].servings + " servings)</p>" + "<p class='' style='color:red;width:50%;margin-top:10px;'>" + data[i].calories + "</p>");
+        var row = $("<div class='' id='removeFood'>");
+        row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].food_name + "</p><p> (" + data[i].servings + " servings)</p></div>" + "<p class='' style='color:red;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories + "</p>");
         $(".foodPost").prepend(row);
 
       }
@@ -190,8 +190,8 @@ function changeDayForward(){
           exerciseCalorieCount = exerciseCalorieCount + data[i].calories_burned
           console.log(exerciseCalorieCount)
   
-          var row = $("<div class='columns' id='removeExercise'>");
-          row.append("<p class='' style='text-indent:10px;width:50%;margin-top:10px;'>" + data[i].exercise_name + " (" + data[i].duration + "min)</p>" + "<span class='' style='color:green;width:50%;margin-top:10px;'>" + data[i].calories_burned + "</p>");
+          var row = $("<div class='' id='removeExercise'>");
+          row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].exercise_name +  "</p><p> (" + data[i].duration + "min)</p></div>" + "<p class='' style='color:green;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories_burned + "</p>");
           $(".exercisePost").prepend(row);
         }
       }
@@ -218,8 +218,8 @@ function changeDayForward(){
           foodCalorieCount = foodCalorieCount + data[i].calories
           console.log(foodCalorieCount);
           
-          var row = $("<div class='columns' id='removeFood'>");
-          row.append("<p class='' style='text-indent:10px;width:50%;margin-top:10px;'>" + data[i].food_name + " (" + data[i].servings + " servings)</p>" + "<p class='' style='color:red;width:50%;margin-top:10px;'>" + data[i].calories + "</p>");
+          var row = $("<div class='' id='removeFood'>");
+          row.append("<div class='' style='text-indent:10px;width:50%;margin-top:10px;float:left;height:50px;'><p>" + data[i].food_name + "</p><p> (" + data[i].servings + " servings)</p></div>" + "<p class='' style='color:red;width:50%;margin-top:10px;float:left;height:50px;text-indent:10px;'>" + data[i].calories + "</p>");
           $(".foodPost").prepend(row);
   
         }
